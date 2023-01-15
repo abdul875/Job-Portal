@@ -1,0 +1,30 @@
+{% load static %}
+
+<div class="mt-3" style="background-color : green ; width : 100% ; height : 350px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mt-3">
+                <h3 class="text-white">Contact Information</h3>
+                <p style="color:white ; font-size : 18px"><i class="fa fa-map-marker text-danger"></i> Jahurul Islam City Gate, A/2 Jahurul Islam Ave, Dhaka 1212</p>
+                <p style="color:white ; font-size : 18px"><i class="fa fa-envelope text-danger"></i> info@ewubd.edu</p>
+                <p style="color:white ; font-size : 18px"><i class="fa fa-mobile text-danger"></i> 55046678, 09666775577</p>
+                <p style="color:white ; font-size : 18px"><i class="fa fa-globe text-danger"></i> http://www.ewubd.edu</p>
+            </div>
+
+            <div class="col-md-4 mt-3">
+                <h3 class="text-white">Online Placement</h3>
+                <p style="color:white ; font-size : 18px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <div class="col-md-4 mt-3">
+                <h3 class="text-white">Newsletter</h3>
+                <p style="color:white ; font-size : 18px">If you need any further information, you can always reach us by providing your Email.</p>
+                <form method="post" class="form-inline">
+                    {% csrf_token %}
+                    <input type="email" name="emailid" placeholder="Email ID" required class="form-control mr-2">
+                    <input type="submit" value="Send" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

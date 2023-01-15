@@ -1,0 +1,97 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navigation.html' %}
+
+<marquee style="font-family : 'Monotype Corsiva' ; font-size : 25px ; color : white ; background : red">
+    Welcome To Our Job Portal
+</marquee>
+
+<style>
+    .container{
+    max-width : 90%
+    }
+
+    .content{
+    text-align : center;
+    position : absolute;
+    bottom : 0;
+    background : rgba(0,0,0,0.5);
+    color : white
+    height:30px ;
+    width:85%;
+    }
+</style>
+
+<div class="container-fluid" style="margin-top:1%">
+    <img src="{% static 'images/portal5.jpg' %}" style = "height:100%;width:100%">
+</div>
+
+<div class="container" style="background-color : black ; height : 600px; margin-top : 2%">
+    <h1 class="text-center text-white">--------| OUR PLACED STUDENTS |--------</h1>
+
+    <div class="row mt-3">
+        <div class="col-md-3">
+            <img src="{% static 'images/f.jpg' %}" style="width : 90%; margin-top:5% ; height : 200px ; border-radius : 50%">
+            <div class="content" style="font-weight : bold">
+                <p>Facebook</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/f.jpg' %}" style="width : 90%; margin-top:5% ; height : 200px ; border-radius : 50%">
+            <div class="content" style="font-weight : bold">
+                <p>Facebook</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/f.jpg' %}" style="width : 90%; margin-top:5% ; height : 200px ; border-radius : 50%">
+            <div class="content" style="font-weight : bold">
+                <p>Facebook</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/f.jpg' %}" style="width : 90%; margin-top:5% ; height : 200px ; border-radius : 50%">
+            <div class="content" style="font-weight : bold">
+                <p>Facebook</p>
+            </div>
+        </div>
+    </div>
+
+        <div class="row mt-3">
+        <div class="col-md-3">
+            <img src="{% static 'images/f.jpg' %}" style="width : 90%; margin-top:5% ; height : 200px ; border-radius : 50%">
+            <div class="content" style="font-weight : bold">
+                <p>Facebook</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/f.jpg' %}" style="width : 90%; margin-top:5% ; height : 200px ; border-radius : 50%">
+            <div class="content" style="font-weight : bold">
+                <p>Facebook</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/f.jpg' %}" style="width : 90%; margin-top:5% ; height : 200px ; border-radius : 50%">
+            <div class="content" style="font-weight : bold">
+                <p>Facebook</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/f.jpg' %}" style="width : 90%; margin-top:5% ; height : 200px ; border-radius : 50%">
+            <div class="content" style="font-weight : bold">
+                <p>Facebook</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'footer.html' %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navigation.html' %}
+
+<marquee style="font-family : 'Monotype Corsiva' ; font-size : 25px ; color : white ; background : red">
+    Admin Login
+</marquee>
+<hr>
+<form class="container mt-5" method="post">
+    {% csrf_token %}
+    <label><b>Username</b></label>
+    <input type="text" class="form-control" name="uname" placeholder="Enter Username">
+
+    <label><b>Password</b></label>
+    <input type="password" class="form-control" name="pwd" placeholder="Enter Password">
+
+    <input type="submit" class="btn btn-primary" style="margin-top : 2% ; color : white ; background-color : green">
+</form>
+
+<p class="text-center text-danger font-weight-bold">{{ error }}</p>
+
+
+
+{% endblock %}

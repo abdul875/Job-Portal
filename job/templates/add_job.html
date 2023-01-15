@@ -1,0 +1,103 @@
+{% load static %}
+{% load widget_tweaks %}
+{% block body %}
+
+{% include 'recruiter_navigation.html' %}
+
+
+<marquee style="font-family : 'Monotype Corsiva' ; font-size : 25px ; color : white ; background : red"
+         xmlns="http://www.w3.org/1999/html">
+    Add Job Details
+</marquee>
+<hr>
+
+<form class="container mt-5" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label><b>Job Title</b></label>
+                {{ form.title|add_class:"form-control" }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label><b>Start Date</b></label>
+                {{ form.start_date|add_class:"form-control" }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label><b>End Date</b></label>
+                {{ form.end_date|add_class:"form-control" }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label><b>Salary</b></label>
+                {{ form.salary|add_class:"form-control" }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label><b>Company Logo</b></label>
+                {{ form.image|add_class:"form-control" }}
+            </div>
+        </div>
+        <div class="m-3">
+            {% if job %}
+            <img src="{{ job.image.url }}" height="150px" width="150px"/>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label><b>Experience</b></label>
+                {{ form.experience|add_class:"form-control" }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label><b>Location</b></label>
+                {{ form.location|add_class:"form-control" }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label><b>Skills</b></label>
+                {{ form.skills|add_class:"form-control" }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label><b>Description</b></label>
+                {{ form.description|add_class:"form-control" }}
+            </div>
+        </div>
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-primary"
+           style="margin-top : 2% ; color : white ; background-color : green">
+
+</form>
+
+
+{% endblock %}

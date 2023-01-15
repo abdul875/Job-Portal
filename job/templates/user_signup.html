@@ -1,0 +1,103 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navigation.html' %}
+
+<script>
+    function checkpass()
+    {
+        if(document.signup.pwd.value!=document.signup.cpwd.value)
+        {
+            alert('Password does not match!')
+            document.signup.cpwd.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<marquee style="font-family : 'Monotype Corsiva' ; font-size : 25px ; color : white ; background : red">
+    User Signup
+</marquee>
+<hr>
+<form class="container mt-5" onsubmit="return checkpass()" name="signup" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label><b>First Name</b></label>
+            <input type="text" class="form-control" name="fname" placeholder="Enter First Name" required>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label><b>Last Name</b> </label>
+            <input type="text" class="form-control" name="lname" placeholder="Enter Last Name" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label><b>Contact Number</b></label>
+            <input type="text" class="form-control" name="contact" placeholder="Enter Contact Number" required>
+        </div>
+
+
+    </div>
+
+        <div class="form-row">
+        <div class="form-group col-md-12">
+            <label><b>Email</b></label>
+            <input type="text" class="form-control" name="email" placeholder="Enter Email Address" required>
+        </div>
+
+    </div>
+
+<div class="form-row">
+        <div class="form-group col-md-6">
+            <label><b>Password</b></label>
+            <input type="password" class="form-control" name="pwd" placeholder="Enter Password" required>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label><b>Confirm password</b></label>
+            <input type="password" class="form-control" name="cpwd" placeholder="Enter Password Again" required>
+        </div>
+    </div>
+
+
+
+<div class="form-row">
+        <div class="form-group col-md-6">
+            <label><b>Gender</b></label>
+            <div style="border:1px solid lightgrey ; padding : 5px ; border-radius : 6px">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customradioinline1" name="gender" class="custom-control-input" value="Male">
+                    <label class="custom-control-label" for="customradioinline1">Male</label>
+                </div>
+
+            <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customradioinline2" name="gender" class="custom-control-input" value="Female">
+                    <label class="custom-control-label" for="customradioinline2">Female</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label><b>Image</b></label>
+            <input type="file" class="form-control" name="image" required>
+        </div>
+    </div>
+
+<input type="submit" value="Submit" class="btn btn-primary" style="margin-top : 2% ; color : white ; background-color : green">
+
+
+</form>
+
+
+<p class="text-center text-danger font-weight-bold">{{ error }}</p>
+
+
+
+{% endblock %}
+

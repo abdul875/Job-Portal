@@ -1,0 +1,52 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navigation.html' %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.3/css/all.min.css">
+
+<style>
+    .mydiv:hover{
+        box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+        transform: translateY(-20px)
+    }
+</style>
+
+
+<marquee style="font-family : 'Monotype Corsiva' ; font-size : 25px ; color : white ; background : red">
+    Contact Us
+</marquee>
+<hr>
+
+<div class="container mt-5">
+    <br> <br>
+    <div class="row mt-5">
+        <div class="col-sm-3 mydiv">
+            <h4 class="text-center"><i class="fas fa-phone-square"></i> Contact</h4>
+            <p class="text-center">55046678, 09666775577</p>
+        </div>
+
+        <div class="col-sm-3 mydiv">
+            <h4 class="text-center"><i class="fas fa-envelope"></i> Email</h4>
+            <p class="text-center">info@ewubd.edu</p>
+        </div>
+
+        <div class="col-sm-3 mydiv">
+            <h4 class="text-center"><i class="fas fa-phone-square"></i> Address</h4>
+            <p class="text-center">Jahurul Islam City Gate, A/2 Jahurul Islam Ave, Dhaka 1212</p>
+        </div>
+
+        <div class="col-sm-3 mydiv">
+            <h4 class="text-center"><i class="far fa-clock"></i> Office Hour</h4>
+            <p class="text-center">8:30 A.M. to 6:00 P.M.</p>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+{% endblock %}
+
